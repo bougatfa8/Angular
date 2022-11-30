@@ -1,0 +1,82 @@
+
+<style>
+    * {
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      margin-left: 130px;
+
+    }
+    
+    /* Float four columns side by side */
+    .column {
+      float: left;
+      width: 25%;
+      padding: 2 10px;
+   
+
+    }
+    
+    /* Remove extra left and right margins, due to padding */
+    .row {margin: 0 -5px;}
+    
+    /* Clear floats after the columns */
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    
+    /* Responsive columns */
+    @media screen and (max-width: 600px) {
+      .column {
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
+      }
+    }
+    
+    /* Style the counter cards */
+    .card {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      padding: 50px;
+      margin: 20px;
+      width: 380px;
+      height: 500px;
+      text-align: center;
+      background-color: #f1f1f1;
+    }
+  
+    </style>
+<body>
+    <div class="row">
+
+        <div class="card" style="width: 400px"  *ngFor="let maison of maisons">
+            <img class="card-img-top" [src]="image" alt="Card image cap" style="height: 250px">
+            <div class="card-body">
+                <h6 style="width: 100%">Address {{maison.villeMaison}} {{maison.adresseMaison}} </h6>
+                <h6 class="card-subtitle mb-1 ">Nombre de chambre est :{{maison.nbrChambre}}</h6>
+
+                <h6 class="card-footer mb-1">{{maison.prixMaison}} Dinar/M</h6>
+                
+<h6>
+    <a class="btn btn-danger" (click)="supprimerMaison(maison)">Supprimer</a>  
+    &nbsp; &nbsp;
+    <a class="btn btn-success"  style="width:100px ;"[routerLink]="['/update-maison',maison.idMaison]">Update   </a>  
+
+</h6>
+
+               
+
+            </div>
+          </div>
+  
+
+        
+
+
+   
+  </div>
+</body>

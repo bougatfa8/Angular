@@ -1,0 +1,36 @@
+<p>recherce-par-proprietaire works!</p>
+<div class="col-sm-4 col-md-4 col-lg-4 mb-4">
+    <label>Proprietaire </label>
+    <select class="form-control form-control-lg" id="idProp" name="idProp"
+    [(ngModel)]="IdProp" (change)="onChange()">
+    <option *ngFor="let p of prop" value="{{p.idProp}}">
+    {{p.nomProp}}
+     </option>
+    </select>
+    
+    <br>
+   
+    <br>
+    <div class="row">
+
+        <div class="card" style="width: 400px"  *ngFor="let m of maison">
+            <img class="card-img-top" [src]="image" alt="Card image cap" style="height: 250px">
+            <div class="card-body">
+                <h6 style="width: 100%">Address {{m.villeMaison}} {{m.adresseMaison}} </h6>
+                <h6 class="card-subtitle mb-1 ">Nombre de chambre est :{{m.nbrChambre}}</h6>
+
+                <h6 class="card-footer mb-1">{{m.prixMaison}} Dinar/M</h6>
+                
+
+
+               
+
+            </div>
+          </div>
+  
+
+        
+
+
+   
+  </div>

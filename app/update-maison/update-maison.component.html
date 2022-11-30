@@ -1,0 +1,43 @@
+<div class="container">
+    <div>
+        <h2>Ajouter un Maison :</h2>
+    </div>
+    <form>
+        <div  class="col-sm-2 col-md-2 col-lg-2">
+            <label>ID Maison</label>
+            <input readonly type="text" [(ngModel)]="currentMaison.idMaison" name="idMaison" class="form-control">
+        </div>
+
+     
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <label>Ville Maison</label>
+            <select class="custom-select" 
+            name="villeMaison"
+            id="villeMaison"
+            [(ngModel)]="currentMaison.villeMaison" >
+                <option value="" disabled>Choose your city</option>
+                <option *ngFor="let ville of Ville" [ngValue]="ville">{{ville}}</option>
+             </select>
+        </div>
+        <div class="col-sm-2 col-md-2 col-lg-2">
+            <label>adresse Maison</label>
+            <input type="Adress de Maison" [(ngModel)]="currentMaison.adresseMaison" name="adresseMaison" class="form-control">
+        </div>
+        <div class="col-sm-2 col-md-2 col-lg-2">
+            <label>Nombre de Chambre </label>
+            <input type="number" [(ngModel)]="currentMaison.nbrChambre" name="nbrChambre" class="form-control">
+        </div>
+
+        <div class="col-sm-2 col-md-2 col-lg-2">
+            <label>Prix Maison</label>
+            <input type="number" [(ngModel)]="currentMaison.prixMaison" name="prixMaison" class="form-control">
+        
+
+  <h6>Nom de Propriétaire:</h6>  {{nomProp}}<br>
+  
+
+        
+            <button type="submit" (click)="addMaison()" class="btn btn-success">Confirmer</button>
+        </div>
+    </form>
+</div>

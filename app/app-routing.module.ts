@@ -1,3 +1,4 @@
+import { LoginComponent } from './login/login.component';
 import { RecherceParProprietaireComponent } from './recherce-par-proprietaire/recherce-par-proprietaire.component';
 import { UpdateMaisonComponent } from './update-maison/update-maison.component';
 import { FooterComponent } from './footer/footer.component';
@@ -11,7 +12,8 @@ const routes: Routes = [
   {path:"",redirectTo:"maisons",pathMatch:"full"},
   {path:"footer",component:FooterComponent},
   {path:"update-maison/:id", component:UpdateMaisonComponent},
-  {path:"recherche-Par-Proprietare",component:RecherceParProprietaireComponent} 
+  {path:"recherche-Par-Proprietare",component:RecherceParProprietaireComponent} ,
+  {path:"login-user",component :LoginComponent}
 
 ];
 

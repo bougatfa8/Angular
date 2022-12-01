@@ -10,6 +10,7 @@ import { FooterComponent } from './footer/footer.component';
 import { UpdateMaisonComponent } from './update-maison/update-maison.component';
 import { RechercheNomComponent } from './recherche-nom/recherche-nom.component';
 import { RecherceParProprietaireComponent } from './recherce-par-proprietaire/recherce-par-proprietaire.component';
+import { LoginComponent } from './login/login.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,6 +20,7 @@ import { RecherceParProprietaireComponent } from './recherce-par-proprietaire/re
     UpdateMaisonComponent,
     RechercheNomComponent,
     RecherceParProprietaireComponent,
+    LoginComponent,
     
   ],
   imports: [
